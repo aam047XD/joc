@@ -3,7 +3,7 @@ version: "2.1"
 services:
   jackett:
     image: lscr.io/linuxserver/jackett:latest
-    container_name: immjackett
+    container_name: jackett
     environment:
       - PUID=1000
       - PGID=1000
@@ -14,5 +14,5 @@ services:
 #      - <path to data>:/config
 #      - <path to blackhole>:/downloads
     ports:
-      - 12451:12451
+      - 10081:10081
     restart: unless-stopped
